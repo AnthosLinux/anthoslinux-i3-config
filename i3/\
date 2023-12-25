@@ -35,12 +35,16 @@ tiling_drag modifier titlebar
 
 default_border pixel 3
 title_align center
-new_window pixel 4
+new_window pixel 5
 client.focused_workspace #333049 #333049 #333049
 
+# polybar 
 exec --no-startup-id polybar -c ~/.config/polybar/config.ini
+
 # start a terminal
 bindsym $mod+Return exec alacritty
+
+# flameshot
 bindsym Print exec flameshot gui
 
 # language
@@ -48,6 +52,9 @@ exec_always "setxkbmap -model pc104 -layout us,ua,ru -variant ,, -option grp:alt
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# wp
+exec_always --no-startup-id feh --randomize --bg-fill ~/Documents/wp.png
 
 # gaps 
 gaps inner 5
